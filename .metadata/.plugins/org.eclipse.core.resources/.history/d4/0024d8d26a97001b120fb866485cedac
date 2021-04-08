@@ -1,0 +1,28 @@
+package com.cg;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.cg.dao.IDao;
+import com.cg.entity.Product;
+
+@SpringBootApplication
+public class SpringBootJpaDemoApplication implements CommandLineRunner{
+	
+	@Autowired
+	IDao dao;
+	
+	public static void main(String[] args) {
+		SpringApplication.run(SpringBootJpaDemoApplication.class, args);
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+		System.out.println("Hello World ");
+		
+		Product
+	}
+
+}
