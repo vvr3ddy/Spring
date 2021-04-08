@@ -1,0 +1,6 @@
+
+#exclude linting 
+.sonarlint/*
+
+#exclude metadata
+.metadata/*
