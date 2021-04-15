@@ -4,3 +4,8 @@
 
 #exclude metadata
 .metadata/*
+/.metadata/
+
+#exclude personal projects
+Pockert/*
+OnlineJobPortal/*

@@ -59,20 +59,22 @@ public class EmployeeController {
 
 	@DeleteMapping(value = "/delete/{empId}")
 	public ResponseEntity<String> deleteEmployeeById(@PathVariable int empId) {
-		boolean flag=false;
+		boolean flag = false;
 		for (Employee e : empList) {
 			if (e.getId() == empId) {
-				flag=true;
+				flag = true;
 				empList.remove(e);
-				
+
+			} else {
+				flag = false;
 			}
-			else {
-				flag=false;
-			}
-			if(flag) return new ResponseEntity<String>("Deleted record successfully", HttpStatus.OK);
-			else return new ResponseEntity<String>("Deleted record successfully", HttpStatus.OK);
+
 		}
-		
+		if (flag)
+			return new ResponseEntity<>("Deleted record successfully", HttpStatus.OK);
+		else
+			return new ResponseEntity<>("Unable to delete record", HttpStatus.NOT_FOUND);
+
 	}
 
 }
